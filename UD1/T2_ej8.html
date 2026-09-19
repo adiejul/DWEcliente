@@ -1,12 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ejercicio 8</title>
 </head>
+
 <body>
-    
-    
+
+    <script>
+
+        let contrasenya = "Adolfo Suárez"
+        
+        let respuesta = prompt(`¿Cuál fue el primer presidente de la democracia española?`)
+
+        while (respuesta != contrasenya){
+
+            if (respuesta == "Adolfo") {
+
+                respuesta = prompt(`Te falta el apellido. ¿Cuál fue el primer presidente de la democracia española?`)
+
+            }else if (respuesta == "Suárez") {
+
+                respuesta = prompt(`Te falta el nombre. ¿Cuál fue el primer presidente de la democracia española?`)
+
+            } else {
+
+                respuesta = prompt(`ERROR. Inténtelo de nuevo. ¿Cuál fue el primer presidente de la democracia española?`)
+
+            }
+        }
+        
+        document.write("Bienvenido a la pagina ")
+
+    </script>
+
 </body>
 </html>
