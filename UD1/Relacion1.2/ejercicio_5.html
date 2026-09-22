@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=0, initial-scale=1.0">
+    <title>Ejercicio 5</title>
+</head>
+<body>
+    <script>
+        let numJugador1 = parseInt(prompt("Jugador 1: Introduce el número a adivinar..."));
+        let numJugador2;
+
+        do{
+
+            numJugador2 = parseInt(prompt("Jugador 2: Introduce un número..."));
+
+            if (numJugador2 > numJugador1){
+                alert("El numero introducido en mayor que el número a adivinar")
+
+            }else if (numJugador2 < numJugador1){
+                alert("El numero introducido en menor que el número a adivinar")
+            }else{
+                alert("¡¡Has acertado!!")
+            }
+
+        } while(numJugador1 !== numJugador2)
+
+    </script>
+    
+</body>
+</html>

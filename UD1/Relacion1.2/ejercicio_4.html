@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 2</title>
+</head>
+
+<body>
+
+    <script>
+
+        let columnas = parseInt(prompt("Introduce el numero de columnas: "));
+        let alto = parseInt(prompt("Introduce la altura en pixels: "));
+        let ancho = parseInt(prompt("Introduce la anchura en pixels: "));
+        let i = 1;
+
+        document.write(`<table border="0" cellspacing="2" bgcolor="black" width="200">`)
+            document.write(`<tr bgcolor="white" height=${alto}>`)
+                while(i <= columnas){
+                    document.write(`<td width=${ancho} > &nbsp; </td>`)
+                    i++;
+                }
+                
+            document.write(`</tr>`)
+
+        document.write(`</table>`)
+
+    </script>
+
+</body>
+
+</html>
