@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 8</title>
+</head>
+
+<body>
+
+    <script>
+
+        let ancho = parseInt(prompt("Introduce la anchura en pixels: "));
+
+        document.write(`<table border="0" cellspacing="2" bgcolor="black" width="200">`)
+
+        for (let i = 1; i <= 8; i++) {
+            document.write(`<tr bgcolor="white" height=${ancho}>`)
+
+            for (let x = 1; x <= 8; x++) {
+                if (i % 2 == 0) {
+                    if (x % 2 == 0) {
+                        document.write(`<td width=${ancho} bgcolor="black" > &nbsp; </td>`)
+                    } else {
+                        document.write(`<td width=${ancho} bgcolor="white" > &nbsp; </td>`)
+                    }
+                } else {
+                    if (x % 2 == 0) {
+                        document.write(`<td width=${ancho} bgcolor="white" > &nbsp; </td>`)
+                    } else
+                        document.write(`<td width=${ancho} bgcolor="black" > &nbsp; </td>`)
+                }
+
+            }
+            document.write(`</tr>`)
+            
+        }
+        document.write(`</table>`)
+
+    </script>
+
+
+</body>
+
+</html>
