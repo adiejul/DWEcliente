@@ -3,11 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ejercicio</title>
+    <title>Ejercicio 8</title>
 </head>
 <body>
 
     <script>
+
+        function rango(num, min, max){
+
+            if(num >= min && num <= max){
+
+                 return "está en rango"
+
+            }else
+
+                return "no está en rango"
+        }
+
+        let num1 = parseFloat(prompt("Introduce el primer numero: "))
+        let num2 = parseFloat(prompt("Introduce el segundo numero: "))
+        let rangoSup = parseFloat(prompt("Introduce el rango superior: "))
+        let rangoInf = parseFloat(prompt("Introduce el rango inferior: "))
+
+        let res1 = rango(num1, rangoInf, rangoSup)
+        let res2 = rango(num2, rangoInf, rangoSup)
+
+        document.write("El numero " + num1 + " " +res1 + ", el numero " + num2 + " " + res2);
 
 
     </script>
