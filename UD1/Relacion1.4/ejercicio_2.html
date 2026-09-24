@@ -3,12 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ejercicio</title>
+    <title>Ejercicio 2</title>
 </head>
 <body>
 
     <script>
 
+        function addOnlyNums(...arg){
+
+            let res = 0;
+
+            for(let i = 0; i< arg.length; i++){
+                if (typeof arg[i] === "number"){
+
+                    res += arg[i]
+                }
+            }
+
+            return res;
+        }
+
+        document.write(addOnlyNums(1, 'cat', 3, 4));
 
     </script>
     
