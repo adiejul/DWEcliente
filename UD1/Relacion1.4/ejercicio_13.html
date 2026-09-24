@@ -3,12 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ejercicio</title>
+    <title>Ejercicio 13</title>
 </head>
 <body>
 
     <script>
+        function factorial(num){
+            let res = 1
 
+            for( let i = 1; num>i ; num--){
+                
+                res = res * num
+            }
+            return res
+        }
+
+        let num = parseInt(prompt("Introduce un factorial"))
+
+        document.write(factorial(num))
 
     </script>
     
