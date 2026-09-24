@@ -35,4 +35,10 @@ function area(radio){
 
 }
 
+function convertTemperature(){
+    let grados = parseFloat(prompt("Introduce los Grados a convertir en Fahrenheit"))
+    let res= (grados * 9/5) + 32;
 
+    return grados + "ºC son " +res+ "ºF"
+
+}
