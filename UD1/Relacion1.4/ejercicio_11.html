@@ -3,12 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ejercicio</title>
+    <title>Ejercicio 11</title>
 </head>
 <body>
 
     <script>
 
+        function imc(peso, altura){
+
+            let res = peso / (altura * altura)
+
+            return res;
+        }
+
+        let peso = parseFloat(prompt("Introduce el peso en Kg"))
+        let altura = parseFloat(prompt("Introduce la altura en m"))
+
+        document.write(imc(peso, altura))
 
     </script>
     
