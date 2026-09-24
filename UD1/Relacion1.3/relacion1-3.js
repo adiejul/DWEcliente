@@ -19,4 +19,20 @@ function supplyCalculator(){
 
 }
 
+function circumference(radio){
+
+    let circunferencia = 2 * 3.14 * radio
+
+    return "La circunferencia es " + circunferencia;
+
+}
+
+function area(radio){
+
+    let area= 3.14 * (radio * radio);
+
+    return "El area es " + area; 
+
+}
+
 
