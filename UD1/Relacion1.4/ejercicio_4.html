@@ -3,11 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ejercicio</title>
+    <title>Ejercicio 4</title>
 </head>
 <body>
 
     <script>
+
+        let array1 = [1,4,7,8];
+        let array2 = [5,8,7,4];
+
+        function combineTwoArrays(array1, array2){
+
+            let array3= []
+
+            for (let i =0; i< array1.length; i++){
+                array3.push(array1[i])
+            }
+
+            for (let i =0; i< array2.length; i++){
+                array3.push(array2[i])
+            }
+
+            return array3;
+        }
+
+        let array3= combineTwoArrays(array1, array2)
+
+        for(let i=0; i<array3.length; i++){
+            document.write(array3[i])
+        }
 
 
     </script>
