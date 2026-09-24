@@ -3,12 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ejercicio</title>
+    <title>Ejercicio 12</title>
 </head>
 <body>
 
     <script>
 
+        function precioFinal(precio, descuento){
+
+            let resultado = precio - ((precio * descuento) /100 )
+
+            return resultado;
+        }
+
+        let precio= parseFloat(prompt("Introduce el precio"))
+        let descuento = parseFloat(prompt("Introduce el descuento (%)"))
+
+        document.write(precioFinal(precio, descuento))
 
     </script>
     
