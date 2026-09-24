@@ -3,12 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ejercicio</title>
+    <title>Ejercicio 10</title>
 </head>
 <body>
 
     <script>
 
+        function areaRectangulo(lado1, lado2){
+
+            let area = (lado1 * lado2);
+
+            return area;
+        }
+
+        let base = parseInt(prompt("Introduce el valor de la base"))
+        let altura = parseInt(prompt("Introduce el valor de la altura"))
+
+        document.write(areaRectangulo(base, altura))
 
     </script>
     
