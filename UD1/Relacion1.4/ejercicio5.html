@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ejercicio4</title>
+</head>
+<body>
+
+    <script>
+
+        let array1=[5,4,3,5,2,5,8]
+        let array2=[3,5,3,5,3,6,3]
+        
+
+        function juntaArray(array1, array2){
+            let array3=[]
+            
+            for(let i=0; i< array1.lenght; i++){
+
+                array3.push(array1[i])
+            }
+
+            for(let i=0; i< array2.lenght; i++){
+
+                array3.push(array2[i])
+            }
+
+            /*
+            for(let i=0; i< array1.lenght; i++){
+                
+                array3 [i] = array1[i] 
+            }
+
+            for(let x=0; x< array2.lenght; i++){
+                
+                array3 [array3.lenght] = array2[x] 
+            }
+            */
+
+            return array3;
+
+        }
+
+        array3 = juntaArray(array1, array2)
+
+        console.log(array3)
+
+        for(let i=0; i< array3.lenght; i++){
+
+            document.write(array3[i])    
+        }
+
+
+    </script>
+
+    
+</body>
+</html>
