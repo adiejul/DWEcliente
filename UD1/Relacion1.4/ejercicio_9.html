@@ -3,11 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ejercicio</title>
+    <title>Ejercicio 9</title>
 </head>
 <body>
 
     <script>
+
+        function tieneTresDigitos(num){
+
+            if (num > 99 && num < 1000){
+                return "si"
+            } else
+                return "no"
+        }
+
+        let num = parseInt(prompt("Introduce el numero a comprobar"))
+
+        document.write(tieneTresDigitos(num))
 
 
     </script>
