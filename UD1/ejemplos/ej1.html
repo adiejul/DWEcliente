@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <script>
+
+        const array1 = [1,2,3,4,5]
+
+        function invierteArray(arDato){
+
+            const arrayNuevo = []
+
+            let contador = arDato.length
+
+            for(let i = 0; i <= arDato.length; i++){
+
+                arrayNuevo.push(arDato[contador])
+                contador--
+            }
+
+            return arrayNuevo
+
+        }
+
+        let arrayNuevo = invierteArray(array1)
+
+        for(let i = 0; i < arrayNuevo.length; i++){
+
+            document.write(arrayNuevo[i])
+            
+            }
+
+    </script>
+
+    // modificar esto, asignarle el valor no la referencia, es decir, sin return, el for de fuera meterlo y asignarle los valores uno por uno dentro.
+    
+</body>
+</html>
