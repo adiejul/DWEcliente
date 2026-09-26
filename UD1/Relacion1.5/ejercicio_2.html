@@ -11,7 +11,38 @@
 
     <script>
 
-        
+        function cuadrado(...args){
+            let res =[]
+
+            for (let i = 0; i < args.length ; i++){
+
+                let total = args[i] * args[i]
+                res.push(total)
+            }
+            return res;
+        }
+
+        function sum(...args){
+
+            let res = cuadrado(...args)
+            let suma = 0;
+
+            for (let i = 0; i < res.length ; i++){
+
+                let pos = res[i] 
+                suma += pos
+            }
+            return suma;
+        }
+
+        function squareAndSum(...args){
+
+            let res = sum(...args)
+            return res;
+
+        }
+
+        console.log(squareAndSum(2,4,3));
 
     </script>
 

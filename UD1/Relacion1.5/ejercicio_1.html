@@ -7,7 +7,29 @@
 </head>
 <body>
     <script>
-        
+
+        function onlyUniques(...args){
+
+            let argNueva =[]
+            
+            for (i = 0; i < args.length; i++){
+
+                let existe = false;
+
+                for (x = 0; x < argNueva.length; x++){
+
+                    if(args[i] === args[x])
+                        existe = true;
+                }
+
+                if (!existe){
+                    argNueva.push(args[i])
+                }
+            }
+            return argNueva
+        }
+
+        console.log(onlyUniques('cat', 'cat', 'dog', 'pig'))
 
     </script>
 
