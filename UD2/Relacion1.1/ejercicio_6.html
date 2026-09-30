@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 6</title>
+</head>
+<body>
+    <script>
+
+        function nombreApellidos(){
+            
+            let nombreCompleto =prompt("Introduce tu nombre y apellidos: ")
+            let tamanyo = nombreCompleto.length;
+            let mayuscula = nombreCompleto.toUpperCase();
+            let minuscula = nombreCompleto.toLowerCase();
+
+            let arrayNombre = nombreCompleto.split(" ");
+
+            let nombre= arrayNombre[0];
+            let apellido1 = arrayNombre[1];
+            let apellido2 = arrayNombre[2];
+
+            let mensaje = " El tamaño de la cadena es "+tamanyo+ "<br>"+
+                           " La cadena en minuscula es: " +minuscula + "<br>"+
+                           " La cadena en mayuscula es: " +mayuscula + "<br>"+
+                           " Nombre: " +nombre + "<br>"+
+                           " Apellido 1: " +apellido1 + "<br>"+
+                           " Apellido 2: " +apellido2;
+            
+            return mensaje;        
+        }
+
+        document.write(nombreApellidos());
+
+    </script>
+    
+</body>
+</html>
