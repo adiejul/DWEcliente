@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 2</title>
+</head>
+
+<body>
+
+    <script>
+
+        let cumple = new Date(prompt("¿Cuando es tu cumpleaños? YYYY-MM-DD"));
+
+        let anyo = cumple.getFullYear();
+        let mes = cumple.getMonth();
+        let dia = cumple.getDate();
+
+        for ( let i = anyo; i <= 2100 ; i++ ){
+
+            let nuevo = new Date(i, mes, dia);
+
+            if(Date.prototype.getDay(nuevo) === 0){
+                console.log(nuevo)
+            }
+
+        }
+
+    </script>
+
+</body>
+
+</html>
