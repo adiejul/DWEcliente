@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ejercicio 4</title>
+</head>
+<body>
+    <script>
+        function tiempoEscribir(){
+
+            let inicial = new Date();
+            let nombre = prompt("Introduce un nombre");
+            let final = new Date();
+
+            let total =  final.getSeconds() - inicial.getSeconds();
+
+            return "En introducir " +nombre+ " has tardado " + total+ " segundos";
+        }
+
+        document.write(tiempoEscribir());
+
+    </script>
+    
+</body>
+</html>
