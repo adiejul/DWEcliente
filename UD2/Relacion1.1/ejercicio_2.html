@@ -11,21 +11,27 @@
 
     <script>
 
-        let cumple = new Date(prompt("¿Cuando es tu cumpleaños? YYYY-MM-DD"));
+         let cumple = prompt("¿Cuando es tu cumpleaños? YYYY-MM-DD");
 
-        let anyo = cumple.getFullYear();
-        let mes = cumple.getMonth();
-        let dia = cumple.getDate();
+        function cumpleDomingo(cumple){
 
-        for ( let i = anyo; i <= 2100 ; i++ ){
+            let cumpleanyos = new Date(cumple);
+            let limite = new Date(2100-11-31);
+            let tiempo = limite.getFullYear() - cumpleanyos.getFullYear();
 
-            let nuevo = new Date(i, mes, dia);
+            for ( let i = 0; i <= tiempo ; i++ ){
 
-            if(Date.prototype.getDay(nuevo) === 0){
-                console.log(nuevo)
+                let nuevoCumple = new Date(cumpleanyos.getTime());
+                nuevoCumple.setFullYear(cumpleanos.getFullYear() + i);
+
+                if (nuevoCumple.getDay() === 0) {
+                console.log(nuevoCumple); 
+                }
             }
-
         }
+
+
+        cumpleDomingo(cumple);
 
     </script>
 
