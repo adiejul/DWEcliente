@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 5</title>
+</head>
+<body>
+    <script>
+        function opciones(){
+            let mensaje = "Introduce una opcion:\n"+
+                            "1. Potencia\n" +
+                            "2. Raiz\n" +
+                            "3. Potencia\n" +
+                            "4. Trigonometria\n" 
+            let opc = parseInt(prompt(mensaje));
+            
+           return opc;
+        }
+
+        function potencia(){
+            
+            let base = parseInt(prompt("Introduce la base"))
+            let exponente = parseInt(prompt("Introduce el exponente"))
+            let resultado = base ** exponente;
+            return resultado;
+        }
+
+        function raiz(){
+            
+            let num = parseInt(prompt("Introduce un numero"))
+            return Math.sqrt(num);
+        }
+
+        function redondeo(){
+            
+            let num = parseFloat(prompt("Introduce un numero decimal"))
+            let resultado = Math.round(num);
+            return resultado;
+        }
+
+        let opc = opciones();
+
+        switch (opc) {
+            case 1:
+                let resPotencia = potencia();
+                alert("La potencia de Z elevado a Y es: " + resPotencia);
+                break;
+        
+            case 2:
+                let resRaiz = raiz();
+                alert("La raiz cuadrada de X es: " + resRaiz);
+                break;
+        
+            case 3:
+                let resRedondeo = redondeo();
+                alert("El numero redondeado es: " + resRedondeo);
+
+                break;
+        
+            
+        }
+
+    </script>
+</body>
+</html>
