@@ -23,20 +23,25 @@
             let base = parseInt(prompt("Introduce la base"))
             let exponente = parseInt(prompt("Introduce el exponente"))
             let resultado = base ** exponente;
-            return resultado;
+            return "La potencia de " + base + " elevado a " + exponente + " es: " +resultado;
         }
 
         function raiz(){
             
             let num = parseInt(prompt("Introduce un numero"))
-            return Math.sqrt(num);
+            return "La raiz de " + num + " es: " + Math.sqrt(num);
         }
 
         function redondeo(){
             
             let num = parseFloat(prompt("Introduce un numero decimal"))
-            let resultado = Math.round(num);
-            return resultado;
+            let round = Math.round(num);
+            let alza = Math.ceil(num);
+            let baja = Math.floor(num);
+            let mensaje = "El numero " + num + " redondeado es: "+ round + "\n"+
+                        "redondeado al alza es: " + alza + "\n"+
+                        "redondeado a la baja es: " + baja;
+            return mensaje;
         }
 
         let opc = opciones();
@@ -44,21 +49,19 @@
         switch (opc) {
             case 1:
                 let resPotencia = potencia();
-                alert("La potencia de Z elevado a Y es: " + resPotencia);
+                alert( resPotencia);
                 break;
         
             case 2:
                 let resRaiz = raiz();
-                alert("La raiz cuadrada de X es: " + resRaiz);
+                alert( resRaiz);
                 break;
         
             case 3:
                 let resRedondeo = redondeo();
-                alert("El numero redondeado es: " + resRedondeo);
+                alert( resRedondeo);
 
                 break;
-        
-            
         }
 
     </script>
