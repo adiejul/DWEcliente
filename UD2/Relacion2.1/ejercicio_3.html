@@ -1,28 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ejercicio 3</title>
 </head>
+
 <body>
     <script>
-        
-        function horaDetallada(){
+
+        function horaDetallada() {
             debugger
             let hoy = new Date();
             let hora = hoy.getHours();
             let minutos = hoy.getMinutes();
             let segundos = hoy.getSeconds();
 
-            let linea1 = "1.    "+hora+":"+minutos+":"+segundos+" (hora detallada con minutos y segundos)<br>";
-            let linea2 = "2.     Son las "+hora+"h y " +minutos+ "m";
+            let linea1 = "1.    " + hora + ":" + minutos + ":" + segundos + " (hora detallada con minutos y segundos)<br>";
+            let linea2 = "2.     Son las " + hora + "h y " + minutos + "m";
             return linea1 + linea2
         }
 
         document.write(horaDetallada());
 
     </script>
-    
+
 </body>
+
 </html>
