@@ -1,15 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script type="text/javascript" src="utils.js"></script>
     <title>Ejercicio 1</title>
 </head>
+
 <body>
     <script>
-        invierteCadena();
+
+        let cadena = "hola como estas";
+
+        document.write(invierteCadena(cadena));
+
+        document.write(inviertePalabras(cadena));
+
+        document.write(encuentraPalabraMasLarga(cadena));
+        
+        document.write(filtraPalabrasMasLargas(cadena, 5));
+
+        document.write(cadenaBienFormada(cadena));
+
+
     </script>
-    
+
 </body>
+
 </html>
