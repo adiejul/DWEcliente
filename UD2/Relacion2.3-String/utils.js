@@ -75,7 +75,7 @@ function informacionCadena(cadena) {
   let nuevaCadena = cadena.split("");
 
   for (let i = 0; i < nuevaCadena.length; i++) {
-    if(nuevaCadena[i].toLowerCase() !== nuevaCadena[i].toUpperCase()){
+    if (nuevaCadena[i].toLowerCase() !== nuevaCadena[i].toUpperCase()) {
       if (nuevaCadena[i] == nuevaCadena[i].toUpperCase())
         contMayu++;
       //hago nuevo if, para que descarte los espacios " "
@@ -84,10 +84,34 @@ function informacionCadena(cadena) {
     }
   }
 
-  if(contMayu > 0 && contMin > 0)
+  if (contMayu > 0 && contMin > 0)
     return "La cadena tiene mayusculas y minusculas"
-  else if (contMayu>0 && contMin == 0)
+  else if (contMayu > 0 && contMin == 0)
     return "La cadena esta compuesta exclusivamente por mayusculas"
-  else 
+  else
     return "La cadena esta compuesta exclusivamente por minusculas"
 }
+
+function localizaSubcadena(cadena, subcadena) {
+  cadena = cadena.toLowerCase();
+  subcadena= subcadena.toLowerCase();
+
+  let res = "";
+  let pos = cadena.search(subcadena);
+
+  while (pos !== -1 ) {
+
+    res += pos + " ";
+
+    cadena = cadena.replace(subcadena,"");
+
+    pos = cadena.search(subcadena);
+
+  }
+  
+  return "La subcadena se encuentra en la posicion: " + res;
+}
+
+
+
+

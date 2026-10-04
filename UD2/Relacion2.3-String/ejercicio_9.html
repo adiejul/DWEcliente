@@ -1,11 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="utils.js"></script>
     <title>Ejercicio 9</title>
 </head>
+
 <body>
-    
+    <script>
+
+        let tarjeta = "1234567812345678";
+
+        function validateCreditCard(tarjeta) {
+            debugger
+            let numero = "0123456789";
+            let cont = 0;
+            let comprob = "";
+
+            if (tarjeta.length !== 16)
+                return "El numero introducido debe tener 16 caracteres";
+
+            for (let i = 0; i < 16; i++) {
+                if (numero.includes(tarjeta.charAt(i)))
+                    cont++
+            }
+
+            if (cont !== 16)
+                return "Solo se pueden incluir numeros";
+            
+            for (let i = 0; i < 16; i++) {
+
+                
+                    
+            }
+            
+        }
+
+        document.write(validateCreditCard(tarjeta));
+
+    </script>
+
 </body>
+
 </html>

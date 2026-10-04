@@ -1,11 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="utils.js"></script>
     <title>Ejercicio 7</title>
 </head>
+
 <body>
-    
+    <script>
+        let cadena = "anita lava la tina";
+        debugger
+        function esPalindroma(cadena) {
+            let cadenaNueva = cadena.toLowerCase().replaceAll(" ", "");
+            let cadenaInversa = "";
+
+            for (let i = cadena.length; i >= 0; i--) {
+                cadenaInversa += cadenaNueva.charAt(i);
+            }
+
+            if (cadenaNueva == cadenaInversa) {
+                return "Es palindroma";
+            } else
+                return "No es palindroma";
+        }
+
+        document.write(esPalindroma(cadena));
+
+
+    </script>
+
 </body>
+
 </html>
