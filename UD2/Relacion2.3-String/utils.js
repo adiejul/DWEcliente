@@ -94,16 +94,16 @@ function informacionCadena(cadena) {
 
 function localizaSubcadena(cadena, subcadena) {
   cadena = cadena.toLowerCase();
-  subcadena= subcadena.toLowerCase();
+  subcadena = subcadena.toLowerCase();
 
   let res = "";
   let pos = cadena.search(subcadena);
 
-  while (pos !== -1 ) {
+  while (pos !== -1) {
 
     res += pos + " ";
 
-    cadena = cadena.replace(subcadena,"");
+    cadena = cadena.replace(subcadena, "");
 
     pos = cadena.search(subcadena);
 
@@ -112,29 +112,29 @@ function localizaSubcadena(cadena, subcadena) {
   return "La subcadena se encuentra en la posicion: " + res;
 }
 
-function separaVocales(cadena){
+function separaVocales(cadena) {
 
-  let cadenaNueva= cadena.replaceAll(" ", "").toLowerCase();
+  let cadenaNueva = cadena.replaceAll(" ", "").toLowerCase();
   let vocales = 'aeiou';
   let vocal = "";
   let consonante = "";
 
-  for (let i = 0; i< cadenaNueva.length; i++){
-    if ( vocales.includes(cadenaNueva.charAt(i))){
+  for (let i = 0; i < cadenaNueva.length; i++) {
+    if (vocales.includes(cadenaNueva.charAt(i))) {
       vocal += cadenaNueva.charAt(i)
-    }else
+    } else
       consonante += cadenaNueva.charAt(i)
   }
   let frase = consonante + vocal;
   return frase;
 }
 
-function quitaRepetidos(cadena){
+function quitaRepetidos(cadena) {
   let cadenaEspacios = cadena.toLowerCase().split("");
   let nuevaCadena = "";
 
-  for (let i = 0; i < cadenaEspacios.length; i++){
-    if(nuevaCadena.includes(cadenaEspacios[i]))
+  for (let i = 0; i < cadenaEspacios.length; i++) {
+    if (nuevaCadena.includes(cadenaEspacios[i]))
       continue;
     else
       nuevaCadena += cadenaEspacios[i];
@@ -143,6 +143,31 @@ function quitaRepetidos(cadena){
   return nuevaCadena;
 }
 
+function juegoCadenas(cadena1, cadena2) {
+
+}
+
+function esPalindroma(cadena) {
+  let cadenaNueva = cadena.toLowerCase().replaceAll(" ", "");
+  let cadenaInversa = "";
+
+  for (let i = cadena.length; i >= 0; i--) {
+    cadenaInversa += cadenaNueva.charAt(i);
+  }
+
+  if (cadenaNueva == cadenaInversa) {
+    return "Es palindroma";
+  } else
+    return "No es palindroma";
+}
+
+function contarPalabras(cadena) {
+
+  let palabras = cadena.trim().split(" ");
+
+  return palabras.length;
+
+}
 
 
 

@@ -10,21 +10,7 @@
 
 <body>
     <script>
-        let cadena = "anita lava la tina";
-        debugger
-        function esPalindroma(cadena) {
-            let cadenaNueva = cadena.toLowerCase().replaceAll(" ", "");
-            let cadenaInversa = "";
-
-            for (let i = cadena.length; i >= 0; i--) {
-                cadenaInversa += cadenaNueva.charAt(i);
-            }
-
-            if (cadenaNueva == cadenaInversa) {
-                return "Es palindroma";
-            } else
-                return "No es palindroma";
-        }
+        let cadena = "anita lavas la tina";
 
         document.write(esPalindroma(cadena));
 
