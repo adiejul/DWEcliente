@@ -216,9 +216,15 @@ function validateCreditCard(tarjeta) {
     return "La suma de todos los digitos tiene que ser mayor que 16"
   }
 
-
   return "Los numeros de la tarjeta son correctos"
+}
 
+function validateCreditCard2(tarjeta){
+
+  tarjeta = tarjeta.replaceAll("-", "");
+  let res = validateCreditCard(tarjeta);
+  return res;
+  
 }
 
 
