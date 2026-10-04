@@ -143,9 +143,26 @@ function quitaRepetidos(cadena) {
   return nuevaCadena;
 }
 
-function juegoCadenas(cadena1, cadena2) {
+function juegoCadenas(cadena, subcadena) {
+  cadena = cadena.toLowerCase();
+  subcadena = subcadena.toLowerCase();
 
+  let res = "";
+  let pos = cadena.search(subcadena);
+
+  while (pos !== -1) {
+
+    res += pos + " ";
+
+    cadena = cadena.replace(subcadena, "");
+
+    pos = cadena.search(subcadena);
+
+  }
+
+  return "La subcadena se encuentra en la posicion: " + res;
 }
+
 
 function esPalindroma(cadena) {
   let cadenaNueva = cadena.toLowerCase().replaceAll(" ", "");
