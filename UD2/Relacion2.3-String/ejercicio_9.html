@@ -13,31 +13,6 @@
 
         let tarjeta = "1234567812345678";
 
-        function validateCreditCard(tarjeta) {
-            debugger
-            let numero = "0123456789";
-            let cont = 0;
-            let comprob = "";
-
-            if (tarjeta.length !== 16)
-                return "El numero introducido debe tener 16 caracteres";
-
-            for (let i = 0; i < 16; i++) {
-                if (numero.includes(tarjeta.charAt(i)))
-                    cont++
-            }
-
-            if (cont !== 16)
-                return "Solo se pueden incluir numeros";
-            
-            for (let i = 0; i < 16; i++) {
-
-                
-                    
-            }
-            
-        }
-
         document.write(validateCreditCard(tarjeta));
 
     </script>

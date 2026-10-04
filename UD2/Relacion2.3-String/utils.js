@@ -169,5 +169,57 @@ function contarPalabras(cadena) {
 
 }
 
+function validateCreditCard(tarjeta) {
+
+  let numero = "0123456789";
+  let cont = 0;
+  let cont1 = 0;
+
+  //el numero tiene que tener 16 digitos
+  if (tarjeta.length !== 16)
+    return "El numero introducido debe tener 16 caracteres";
+
+  //el numero tiene que estar compuesto unicamente por numeros
+  for (let i = 0; i < 16; i++) {
+    if (numero.includes(tarjeta.charAt(i)))
+      cont++
+  }
+
+  if (cont !== 16)
+    return "Solo se pueden incluir numeros";
+
+  // tiene que haber como minimo dos numeros diferentes
+
+  for (let i = 1; i < 16; i++) {
+    if (tarjeta.charAt(0) !== tarjeta.charAt(i)) {
+      cont1++;
+    }
+  }
+  if (cont1 == 0) {
+    return "No pueden ser los 16 digitos iguales"
+  }
+
+
+  //tiene que acabar en numero par
+  if (parseInt(tarjeta.charAt(15)) % 2 !== 0) {
+    return "El último numero de la tarjeta debe ser par"
+  }
+
+  //la suma de todos sus digitos tiene que ser mayor que 16
+  let suma = 0;
+
+  for (let i = 0; i < 15; i++) {
+    suma += parseInt(tarjeta.charAt(i));
+  }
+
+  if (suma <= 16) {
+    return "La suma de todos los digitos tiene que ser mayor que 16"
+  }
+
+
+  return "Los numeros de la tarjeta son correctos"
+
+}
+
 
 
