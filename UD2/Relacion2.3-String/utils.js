@@ -129,6 +129,20 @@ function separaVocales(cadena){
   return frase;
 }
 
+function quitaRepetidos(cadena){
+  let cadenaEspacios = cadena.toLowerCase().split("");
+  let nuevaCadena = "";
+
+  for (let i = 0; i < cadenaEspacios.length; i++){
+    if(nuevaCadena.includes(cadenaEspacios[i]))
+      continue;
+    else
+      nuevaCadena += cadenaEspacios[i];
+  }
+
+  return nuevaCadena;
+}
+
 
 
 
