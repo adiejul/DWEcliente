@@ -108,8 +108,25 @@ function localizaSubcadena(cadena, subcadena) {
     pos = cadena.search(subcadena);
 
   }
-  
+
   return "La subcadena se encuentra en la posicion: " + res;
+}
+
+function separaVocales(cadena){
+
+  let cadenaNueva= cadena.replaceAll(" ", "").toLowerCase();
+  let vocales = 'aeiou';
+  let vocal = "";
+  let consonante = "";
+
+  for (let i = 0; i< cadenaNueva.length; i++){
+    if ( vocales.includes(cadenaNueva.charAt(i))){
+      vocal += cadenaNueva.charAt(i)
+    }else
+      consonante += cadenaNueva.charAt(i)
+  }
+  let frase = consonante + vocal;
+  return frase;
 }
 
 
