@@ -1,0 +1,4 @@
+1. Utilizando setTimeout(), setInterval() creo un contador hacia atrás de 60 segundos
+
+2. Usando el objeto Date, sus métodos getHours, getMinutes y GetSeconds y
+    el método setTimeout(),setInterval()  crea un reloj que se actualice cada segundo
