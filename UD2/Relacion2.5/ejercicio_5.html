@@ -5,7 +5,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ejercicio 5</title>
 </head>
+
 <body>
+
+    <input type="button" value="abrir ventana" onclick="abrirVentana()">
+    <input type="button" value="cerrar ventana" onclick="cerrarVentana()">
+    <input type="button" value="enviar mensaje" onclick="enviarMensaje()">
+
+    <script>
+
+        let nueva;
+
+        function abrirVentana(){
+            nueva = window.open("","","width=500,height=400");
+            nueva.moveTo(0,-1);
+
+            nueva.document.write(`
+
+
+            <input type="button" value="cerrar ventana" onclick="window.close()">
+            
+            `);
+
+        }
+
+        function cerrarVentana(){
+            nueva.close();
+        }
+
+        function enviarMensaje(){
+            nueva = window.open("./ventanaSecundaria.html", "" ,"width=500,height=400");
+            nueva.moveTo(0,-1);
+
+            nueva.document.write(`
+
+            <p> Mensaje recibido desde la pantalla principal</p>
+            <input type="button" value="cerrar ventana" onclick="window.close()">
+            
+            `);
+
+        }
+
+    </script>
     
 </body>
 </html>

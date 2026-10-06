@@ -6,6 +6,32 @@
     <title>Ejercicio 4</title>
 </head>
 <body>
+
+    <script>
+
+        let contador = 5;
+
+        let intervalo = setInterval(function(){
+                            if (contador !== 0){
+                                document.open();
+                                document.write(`
+                                    <h1>Hemos cambiado de ubicación esta página. En breves momentos será redireccionado...</h1>
+                                    <h1>...${contador}...</h1>
+                                    `);
+                                contador --
+                            }else
+                            clearInterval(intervalo);
+                        }, 1000);
+
+        
+
+        setTimeout(function(){
+            location = "https://www.pccomponentes.com";
+        
+        }, 5000);
+        
+
+    </script>
     
 </body>
 </html>
