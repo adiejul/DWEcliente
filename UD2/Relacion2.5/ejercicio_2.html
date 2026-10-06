@@ -6,6 +6,31 @@
     <title>Ejercicio 2</title>
 </head>
 <body>
+
+    <input type="button" value="abrir ventana" onclick="abrirVentana()">
+    <input type="button" value="cerrar ventana" onclick="cerrarVentana()">
+
+    <script>
+
+        let nueva;
+
+        function abrirVentana(){
+            nueva = window.open("","","width=500,height=400");
+            nueva.moveTo(0,-1);
+
+            nueva.document.write(`
+
+            <input type="button" value="cerrar ventana" onclick="window.close()">
+            
+            `);
+
+        }
+
+        function cerrarVentana(){
+            nueva.close();
+        }
+
+    </script>
     
 </body>
 </html>
