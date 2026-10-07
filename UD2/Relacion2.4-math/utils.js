@@ -60,10 +60,21 @@ function segundoGrado(){
     let b= parseInt(prompt("Introduce el valor de b"));
     let c= parseInt(prompt("Introduce el valor de c"));
 
-    let x1= ((-1*b) + Math.sqrt(Math.pow(b, 2)+(-4*a*c)))/(2*a)
-    let x2= ((-1*b) - Math.sqrt(Math.pow(b, 2)+(-4*a*c)))/(2*a)
+    let operacion = Math.pow(b, 2)+(-4*a*c)
 
-    return "El resultado con el + es" + x1 + "El resultado con el - es "+ x2;
+    if (a == 0)
+        return "No es una operacion de segundo grado"
+    else if (operacion < 0)
+        return "b² - 4ac da numero negativo, no se puede realizar la equacionb"
+    else{
+    
+        let x1= ((-1*b) + Math.sqrt(operacion))/(2*a)
+        let x2= ((-1*b) - Math.sqrt(operacion))/(2*a)
+
+        return "El resultado con el + es " + x1 + ", el resultado con el - es "+ x2;
+    }
+
+    
 }
 
 
