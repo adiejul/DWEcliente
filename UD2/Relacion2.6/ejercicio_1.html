@@ -1,11 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Ejercicio 1</title>
 </head>
+
 <body>
-    
+
+    <script>
+
+        document.write(` 
+        
+            Propiedades de la pantalla <br>
+                        
+            screen.width : ${screen.width} <br>
+            screen.height : ${screen.height} <br>
+            screen.availWidth : ${screen.availWidth} <br>
+            screen.availHeight : ${screen.availHeight} <br>
+            screen.colorDepth : ${screen.colorDepth} <br>
+            screen.pixelDepth : ${screen.pixelDepth} <br>
+        `)
+
+        document.write(`
+
+            Window Location<br>
+                        
+            window.location.href: ${window.location.href} <br>
+            window.location.hostname : ${window.location.hostname} <br>
+            window.location.pathname : ${window.location.pathname} <br>
+            window.location.protocol : ${window.location.protocol} <br>       
+        `)
+
+
+        document.write(`
+
+            Window Location <br>
+                        
+            Cookie: ${navigator.cookieEnabled} <br>
+            Navegador : ${navigator.appCodeName} <br>
+        `)
+
+    </script>
+
 </body>
+
 </html>
