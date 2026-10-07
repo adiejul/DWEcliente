@@ -105,6 +105,12 @@ function numeroAscendente() {
 
     document.write(`</table>`);
     return " ";
+}
+
+function imagenRandom(){
+    let numero = Math.floor(Math.random() *3) +1;
+    return numero;
+
 
 }
 
