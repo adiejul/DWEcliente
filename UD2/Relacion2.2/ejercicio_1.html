@@ -7,13 +7,15 @@
 </head>
 <body>
     <script>
+        
         let contador = 60;
 
-        setInterval(function(){
+        let interval = setInterval(function(){
             if (contador !== 0){
                 document.write(contador + "<br>");
                 contador --
-            }
+            }else
+            clearInterval(interval);
         }, 1000);
     
     </script>
