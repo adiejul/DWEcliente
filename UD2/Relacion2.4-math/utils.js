@@ -73,8 +73,14 @@ function segundoGrado(){
 
         return "El resultado con el + es " + x1 + ", el resultado con el - es "+ x2;
     }
-
-    
+   
 }
 
+function potencia(){
+
+    let base= parseInt(prompt("Introduce el valor de la base "));
+    let expo= parseInt(prompt("Introduce el valor del exponente"));
+
+    return Math.pow(base,expo);
+}
 
