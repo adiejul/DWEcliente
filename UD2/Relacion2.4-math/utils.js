@@ -107,10 +107,17 @@ function numeroAscendente() {
     return " ";
 }
 
-function imagenRandom(){
-    let numero = Math.floor(Math.random() *3) +1;
-    return numero;
+function imagenRandom() {
+    let numero = Math.floor(Math.random() * 3) + 1;
 
+    if (numero == 1) {
+        return `<img src="./img/1.jpg" alt="moto 1">`;
+
+    } else if (numero == 2) {
+        return `<img src="./img/2.jpg" alt="moto 2">`;
+
+    } else
+        return `<img src="./img/3.jpg" alt="moto 3 ">`;
 
 }
 
