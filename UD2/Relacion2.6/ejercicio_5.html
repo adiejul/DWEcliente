@@ -1,11 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ejercicio 5</title>
 </head>
+
 <body>
-    
+    <h4>A. Escribe la fecha de la ultima actualizacion</h4>
+
+    <input type="button" value="fecha ultima actualizacion" onclick="fechaActualizacion()">
+    <p id="fecha"></p>
+
+    <h4>B. muestra la URL desde la cual se ha activado el enlace que ha llevado al usuario hasta el
+        documento actual.</h4>
+
+    <input type="button" value="mostrar URL" onclick="muestraUrl()">
+    <p id="muestraUrl"></p>
+
+
+    <h4>C. muestra el título del documento actual </h4>
+
+    <input type="button" value="muestra titulo actual" onclick="muestraTitulo()">
+    <p id="muestraTitulo"></p>
+
+    <h4>D. muestra la dirección URL completa.</h4>
+
+    <input type="button" value="mostrar URL completa" onclick="muestraUrlCompleta()">
+    <p id="muestraUrlCompleta"></p>
+
+
+    <script>
+
+        function fechaActualizacion() {
+            document.getElementById("fecha").innerHTML = document.lastModified;
+        }
+
+        function muestraUrl() {
+            document.getElementById("muestraUrl").innerHTML = document.referrer;
+        }
+
+        function muestraTitulo(){
+            document.getElementById("muestraTitulo").innerHTML = document.title
+        }
+
+        function muestraUrlCompleta() {
+            document.getElementById("muestraUrlCompleta").innerHTML = document.URL;
+        }
+
+    </script>
+
 </body>
+
 </html>

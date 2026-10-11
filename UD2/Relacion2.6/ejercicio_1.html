@@ -10,39 +10,55 @@
 
 <body>
 
+    <table border="1">
+
+        <tr>
+            <th colspan="2">Informacion del navegador cliente</th>
+        </tr>
+        <tr>
+            <td>window.location.href</td>
+            <td id="n1"></td>
+        </tr>
+        <tr>
+            <td>window.location.hostname</td>
+            <td id="n2"></td>
+        </tr>
+        <tr>
+            <td>window.location.pathname</td>
+            <td id="n3"></td>
+        </tr>
+        <tr>
+            <td>window.location.protocol</td>
+            <td id="n4"></td>
+        </tr>
+        <tr>
+            <td>window.location.href</td>
+            <td id="n5"></td>
+        </tr>
+        <tr>
+            <td>navigator.cookieEnabled</td>
+            <td id="n6"></td>
+        </tr>
+        <tr>
+            <td>navigator.appCodeName</td>
+            <td id="n7"></td>
+        </tr>
+
+
+    </table>
+
+
     <script>
+                      
+            document.getElementById("n1").innerHTML = window.location.href;
+            document.getElementById("n2").innerHTML = window.location.hostname;
+            document.getElementById("n3").innerHTML = window.location.pathname;
+            document.getElementById("n4").innerHTML = window.location.protocol;
+            document.getElementById("n5").innerHTML = window.location.href;
+            document.getElementById("n6").innerHTML = navigator.cookieEnabled;
+            document.getElementById("n7").innerHTML = navigator.appCodeName;
 
-        document.write(` 
-        
-            Propiedades de la pantalla <br>
-                        
-            screen.width : ${screen.width} <br>
-            screen.height : ${screen.height} <br>
-            screen.availWidth : ${screen.availWidth} <br>
-            screen.availHeight : ${screen.availHeight} <br>
-            screen.colorDepth : ${screen.colorDepth} <br>
-            screen.pixelDepth : ${screen.pixelDepth} <br>
-        `)
-
-        document.write(`
-
-            Window Location<br>
-                        
-            window.location.href: ${window.location.href} <br>
-            window.location.hostname : ${window.location.hostname} <br>
-            window.location.pathname : ${window.location.pathname} <br>
-            window.location.protocol : ${window.location.protocol} <br>       
-        `)
-
-
-        document.write(`
-
-            Window Location <br>
-                        
-            Cookie: ${navigator.cookieEnabled} <br>
-            Navegador : ${navigator.appCodeName} <br>
-        `)
-
+         
     </script>
 
 </body>

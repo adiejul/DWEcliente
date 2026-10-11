@@ -1,11 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ejercicio 4</title>
 </head>
+
 <body>
-    
+
+    <h4>A. Desplaza el scroll hasta abajo</h4>
+
+    <input type="button" value="ir abajo del todo" onclick="scrol()">
+
+    <h4>B. Nombre del host</h4>
+
+    <input type="button" value="host" onclick="nombreHost()">
+    <p id="host"></p>
+
+
+    <h4>C. Url completa</h4>
+
+    <input type="button" value="URL completa" onclick="urlCompleta()">
+    <p id="url"></p>
+
+    <h4>D. Activa una URL dada.</h4>
+
+    <input type="button" value="protocolo empleado" onclick="protocolo()">
+    <p id="protocolo"></p>
+
+    <h4>F. boton para refrescar la pagina</h4>
+
+    <input type="button" value="recarga la pagina" onclick="recargar()">
+    <p id="recarga"></p>
+
+    <script>
+
+        function scrol() {
+            window.scrollTo({
+                top: document.body.scrollHeight,
+                behavior: 'smooth' // Esto hace que el desplazamiento sea suave y animado
+            });
+        }
+
+        function nombreHost() {
+            document.getElementById("host").innerText = location.hostname
+        }
+
+        function urlCompleta() {
+            document.getElementById("url").innerText = location.href
+        }
+
+        function nuevaPagina(){
+            let nuevaURL = prompt("Introduce la pagina a donde quieres ir:")
+            let nueva = window.open("nuevaURL", "", "heigth=300,width=300")
+        }
+
+        function protocolo(){
+            document.getElementById("protocolo").innerText = location.protocol
+        }
+
+        function recargar(){
+            document.getElementById("recarga").innerText = location.reload()
+        }
+        
+
+
+
+
+    </script>
+
 </body>
+
 </html>

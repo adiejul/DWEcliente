@@ -1,11 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ejercicio 6</title>
 </head>
+
 <body>
-    
+
+    <p>
+        <a href="https://www.google.com">Enlace a Google</a>
+        <a href="https://www.wikipedia.org">Enlace a Wikipedia</a>
+    </p>
+
+    <p>
+        <img id="imagen1" src="https://www.pexels.com/es-es/foto/carretera-paisaje-naturaleza-camino-27662214/"
+            alt="Imagen 1">
+        <img id="imagen2"
+            src="https://www.pexels.com/es-es/foto/pareja-con-moto-sentada-en-la-cima-de-una-colina-al-atardecer-15845125/"
+            alt="Imagen 2">
+    </p>
+
+
+    <h4>a. Muestra el numero de anclas que tiene el documento.</h4>
+
+    <input type="button" value="numero anclas" onclick="numeroAnclas()">
+    <p id="resultado"></p>
+
+    <h4>b. Muestra el texto dentro del tag del primer ancla (innerHTML).</h4>
+
+    <input type="button" value="texto dentro del tag numero 1" onclick="textoTag()()">
+    <p id="resultado2"></p>
+
+    <h4>c. Muestra el numero de imágenes del documento</h4>
+
+    <input type="button" value="numero imagenes" onclick="numeroImagenes()">
+    <p id="numeroImagenes"></p>
+
+    <h4>d. Muestra el id de la primera imagen</h4>
+
+    <input type="button" value="id primera imagen" onclick="textoImagen()">
+    <p id="idImagen"></p>
+
+    <h4>e. Muestra el numero de enlaces del documento</h4>
+
+    <input type="button" value="numero enlaces" onclick="numeroEnlaces()">
+    <p id="numeroEnlaces"></p>
+
+    <h4>f. Cambia el título del documento</h4>
+
+    <input type="button" value="cambiar titulo" onclick="cambiarTitulo()">
+
+
+    <script>
+
+
+        function numeroAnclas() {
+            totalAnclas = document.getElementsByTagName("a").length;
+            document.getElementById("resultado").innerHTML = totalAnclas;
+        }
+
+        function textoTag() {
+            document.getElementById("resultado2").innerText = document.getElementsByTagName("a")[0].innerHTML;
+        }
+
+        function numeroImagenes(){
+            numeroImagenes = document.getElementsByTagName("img").length;
+            document.getElementById("numeroImagenes").innerHTML = numeroImagenes;
+        }
+
+        function textoImagen(){
+            document.getElementById("idImagen").innerHTML = document.getElementsByTagName("img")[0];
+        }
+
+        function numeroEnlaces(){
+            document.getElementById("numeroEnlaces").innerHTML = document.getElementsByTagName("a").length;
+        }
+
+        function cambiarTitulo(){
+            nuevoNombre = prompt("Introduce el nuevo nombre")
+            document.title = nuevoNombre;
+        }
+
+    </script>
+
+
+
+
+
+
+
 </body>
+
 </html>

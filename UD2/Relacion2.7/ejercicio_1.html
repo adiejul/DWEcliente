@@ -1,11 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
     <title>Ejercicio 1</title>
+    <script type="importmap">
+ {
+     "imports": {
+         "leaflet": "https://cdn.jsdelivr.net/npm/leaflet@2.0.0-alpha.1/dist/leaflet.js"
+     },
+     "integrity": {
+         "https://cdn.jsdelivr.net/npm/leaflet@2.0.0-alpha.1/dist/leaflet.js": "sha256-gj5JhNAaMi6LCs+jVFOk8sXDe1sWSS2Zlc87m+trLiQ="
+     }
+ }
+ </script>
+    <style>
+        #map {
+            height: 400px;
+            width: 100%;
+        }
+    </style>
 </head>
+
 <body>
-    
+    <h1>Ver tu Ubicación en el Mapa</h1>
+    <p>Pulsa el botón para mostrar tu ubicación en el mapa.</p>
+
+    <button onclick="getLocation()">Mostrar Ubicación</button>
+ <div id="map" style="height: 600px;"></div>
+
+    <script type="module">
+        import { LeafletMap, TileLayer, Marker, Circle, Polygon, Popup } from 'leaflet';
+
+
+        function getLocation() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(showPosition);
+            } else {
+                console.log("Geolocation is not supported by this browser.");
+            }
+        }
+
+        function showPosition(position) {
+            let latitud = position.coords.latitude;
+            let longitud = position.coords.longitude;
+
+            const map = new LeafletMap('map').setView([latitud, longitud], 20);
+
+            new TileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                maxZoom: 19,
+                attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+            }).addTo(map);
+
+        }
+
+        getLocation();
+    </script>
+
+
 </body>
+
 </html>

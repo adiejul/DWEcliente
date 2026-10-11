@@ -6,6 +6,152 @@
     <title>Ejercicio 3</title>
 </head>
 <body>
+
+    <h4>A. Abre una ventana de confirmacion</h4>
+
+    <input type="button" value="abrir ventana" onclick="ventanaConfirmacion()">
+
+    <h4>B. Abre una ventana y después analiza si esta se cerrado o no</h4>
+
+    <input type="button" value="abrir ventana" onclick="ventanaNueva()">
+    <input type="button" value="comprobar ventana" onclick="comprobarVentana()">
+
+    <h4>C. Abre una ventana y pide al usuario un nuevo nombre para ella.</h4>
+
+    <input type="button" value="abrir ventana" onclick="ventanaNuevaC()">
+    <input type="button" value="cambiar nombre ventana" onclick="cambiarNombre()">
+
+    <h4>D. Cierra una ventana y cierra una ventana abierta con open.</h4>
+
+    <input type="button" value="abrir ventana" onclick="ventanaNuevaD()">
+    <input type="button" value="cerrar ventana" onclick="cerrarVentana()">
+
+    <h4>F. Abre ventana de 300 x 100 y permita cambiar de tamaño</h4>
+
+    <input type="button" value="abrir ventana" onclick="ventanaNuevaF()">
+    <input type="button" value="cambiar tamaño" onclick="cambiarSize()">
+
+    <h4>G. Escribe un texto mejorando el F</h4>
+
+    <input type="button" value="abrir ventana" onclick="ventanaNuevaG()">
+    <input type="button" value="cambiar tamaño" onclick="cambiarSizeG()">
+    <p id="resultado"></p>
+
+    <h4>H. Mueve la pantalla 50 px hacia abajo</h4>
+
+    <input type="button" value="abrir ventana" onclick="ventanaNuevaH()">
+    <input type="button" value="mover pantalla" onclick="muevePantallaH()">
+
+    <h4>I. Al abrir la nueva ventana que se situe arriba a la izquierda</h4>
+
+    <input type="button" value="abrir ventana" onclick="ventanaNuevaI()">
+
+
+
+    <script>
+
+        let nueva
+
+        function ventanaConfirmacion(){
+
+            let nueva = window.open("","","width=500,height=400");
+
+            nueva.document.write("Has abierto una ventana Nueva");
+        }
+
+        function ventanaNueva(){
+            let nueva = window.open("","","width=500,height=400");
+        }
+
+        function comprobarVentana(){
+            if (!ventanaNueva)
+                alert("Ventana cerrada");
+            else
+                alert("Ventana abierta");
+        }
+
+        let nuevaC;
+
+        function ventanaNuevaC(){
+            nuevaC = window.open("","","width=500,height=400");
+        }
+
+            let nombreNuevo
+
+        function cambiarNombre(){
+            nombreNuevo = prompt("Introduce un nuevo nombre");
+            nuevaC.document.title = nombreNuevo;
+        }
+
+        let nuevaD
+        function ventanaNuevaD(){
+            nuevaD = window.open("","","width=500,height=400");
+        }
+
+        function cerrarVentana(){
+            nuevaD.close();
+        }
+
+        let nuevaF
+        function ventanaNuevaF(){
+            nuevaF = window.open("","","width=300,height=100");
+        }
+
+        function cambiarSize(){
+            let width = prompt("Introduce el ancho");
+            let height = prompt("Introduce el alto");
+
+            nuevaF.resizeTo(width, height);
+        }
+
+        let nuevaG
+        function ventanaNuevaG(){
+            nuevaG = window.open("","","width=300,height=100");
+        }
+
+        function cambiarSizeG(){
+            let width = prompt("Introduce el ancho");
+            let height = prompt("Introduce el alto");
+
+            nuevaG.resizeTo(width, height);
+
+            document.getElementById("resultado").innerHTML ="El tamaño ha sido modificado";
+        }
+
+        let nuevaH
+        function ventanaNuevaH(){
+            nuevaH = window.open("","","width=300,height=100");
+            nuevaH.moveTo(100, 100);
+        }
+
+        function muevePantallaH(){
+            nuevaH.moveTo(550, 550);
+        }
+
+        let nuevaI
+        function ventanaNuevaI(){
+            nuevaI = window.open("","","width=300,height=100");
+            nuevaI.moveTo(-5000,-5000)
+        }
+
+        
+
+
+
+
+        
+
+
+
+
+
+
+
+
+
+
+
+    </script>
     
 </body>
 </html>

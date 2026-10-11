@@ -6,14 +6,71 @@
     <title>Ejercicio 2</title>
 </head>
 <body>
-    <script>
+ 
 
-    document.write("Altura de la pantalla: " + screen.height + "<br>")
-    document.write("Anchura de la pantalla: " + screen.width + "<br>")
-    document.write("Profundidad de color: " + screen.colorDepth + "<br>")
-    document.write("Profundidad de los pixeles: " + screen.pixelDepth + "<br>")
+        <table border="1">
+
+        <tr>
+            <th colspan="2">Informacion de la patantalla del cliente</th>
+        </tr>
+        <tr>
+            <td>Altura de la pantalla</td>
+            <td id="n1"></td>
+        </tr>
+        <tr>
+            <td>Anchura de la pantalla</td>
+            <td id="n2"></td>
+        </tr>
+        <tr>
+            <td>Profundidad de color</td>
+            <td id="n3"></td>
+        </tr>
+        <tr>
+            <td>Profundidad de los pixeles</td>
+            <td id="n4"></td>
+        </tr>
+        <tr>
+            <td>screen.width</td>
+            <td id="n5"></td>
+        </tr>
+        <tr>
+            <td>screen.height</td>
+            <td id="n6"></td>
+        </tr>
+        <tr>
+            <td>screen.availWidth</td>
+            <td id="n7"></td>
+        </tr>
+        <tr>
+            <td>screen.availHeight</td>
+            <td id="n8"></td>
+        </tr>
+        <tr>
+            <td>screen.colorDepth</td>
+            <td id="n9"></td>
+        </tr>
+        <tr>
+            <td>screen.pixelDepth</td>
+            <td id="n10"></td>
+        </tr>
+        
+    </table>
+
+
+    <script>
+                      
+            document.getElementById("n1").innerHTML = screen.height;
+            document.getElementById("n2").innerHTML = screen.width;
+            document.getElementById("n3").innerHTML = screen.colorDepth;
+            document.getElementById("n4").innerHTML = screen.pixelDepth;
+            document.getElementById("n5").innerHTML = screen.width;
+            document.getElementById("n6").innerHTML = screen.height;
+            document.getElementById("n7").innerHTML = screen.availWidth;
+            document.getElementById("n8").innerHTML = screen.availHeight;
+            document.getElementById("n9").innerHTML = screen.colorDepth;
+            document.getElementById("n10").innerHTML = screen.pixelDepth;
 
     </script>
-    
+   
 </body>
 </html>
