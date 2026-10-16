@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 9</title>
+</head>
+<body>
+
+    <script>
+
+        //"pepe, juan, jose, manuel, lucas, ana, dario, zia"
+
+        let nombres = prompt("Introduce varios nombres separados por ','")
+
+        nombres = nombres.split(",")
+
+        for (let i = 0; i < nombres.length; i++) {
+
+            nombres[i] = nombres[i].trim();
+        }
+
+        document.write(`Numero de palabras: ${nombres.length}<br>`)
+        document.write(`Primera palabra: ${nombres[0]}<br>`)
+        document.write(`Última de palabra: ${nombres[nombres.length-1]}<br>`)
+        document.write(`Palabras invertidas: ${nombres.reverse()}<br>`)
+        document.write(`Palabras de la A a la Z: ${nombres.sort()}<br>`)
+        document.write(`Palabras de la Z a la A: ${nombres.reverse()}<br>`)
+
+    </script>
+    
+</body>
+</html>

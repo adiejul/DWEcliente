@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 6</title>
+</head>
+<body>
+    <script>
+        
+        
+
+        const potencia = (base, exponente) =>{
+            if (exponente === 0) return 1;
+
+            return base * potencia(base, exponente -1)
+        }
+
+        let resultado = potencia(2,3)
+
+        console.log("2 elevado a 3 es: " + resultado)
+
+    </script>
+</body>
+</html>

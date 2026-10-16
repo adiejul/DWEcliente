@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 1</title>
+</head>
+<body>
+    <script>
+
+        let valores = prompt("Introduce 4 valores: (p.ej. 4, 5, 7, 0)")
+        let nuevo = []
+
+        valores = valores.split(",")
+
+        for (const numero of valores) {
+            nuevo.push(numero.trim())
+        }
+       
+    
+        document.write("El valor maximo de los introducidos es: "+Math.max(...nuevo))
+
+    </script>
+    
+</body>
+</html>

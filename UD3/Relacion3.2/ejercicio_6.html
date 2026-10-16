@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 6</title>
+</head>
+
+<body>
+
+    <input type="button" value="buscar" onclick="buscarPalabra()">
+
+    <div>
+
+        <h1>La canción del pirata</h1>
+
+        <p>Con diez cañones por banda,
+            viento en popa a toda vela,
+            no corta el mar, sino vuela
+            un velero bergantín:
+            bajel pirata que llaman,
+            por su bravura, el Temido,
+            en todo mar conocido
+            del uno al otro confín.</p>
+
+        <p>La luna en el mar riela,
+            en la lona gime el viento,
+            y alza en blando movimiento
+            olas de plata y azul;
+            y ve el capitán pirata,
+            cantando alegre en la popa,
+            Asia a un lado, al otro Europa,
+            y allá a su frente Stambul</p>
+
+        <p>...</p>
+
+        <p>José de Espronceda</p>
+
+    </div>
+
+    <script>
+
+        function buscarPalabra() {
+            let palabra = prompt("introduce la palabra a buscar: ");
+
+            //Esto es para obtener el texto
+            let textoDocumento = document.body.innerText;
+
+            let encuentra = textoDocumento.toLocaleLowerCase().includes(palabra.toLocaleLowerCase());
+
+            if(encuentra){
+                alert(`la palabra "${palabra}" se encuentra en el documento`)
+            } else{
+                alert(`la palabra "${palabra}" no se encuentra en el documento`)
+            }
+
+        }
+
+    </script>
+
+</body>
+
+</html>

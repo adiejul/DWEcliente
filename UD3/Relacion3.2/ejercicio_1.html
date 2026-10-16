@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 1</title>
+</head>
+
+<body>
+    <script>
+
+        let arNumeros = [];
+
+        for(let i = 0; i <5; i++){
+            arNumeros.push(parseFloat(prompt(`Introduce el numero ${i+1} /5`)))
+        }
+
+        let minimo = Math.min(...arNumeros);
+
+        let maximo = Math.max(...arNumeros);
+
+        let total = 0;
+
+        for (const numero of arNumeros) {
+            total += numero;
+        }
+
+        let medio = total / arNumeros.length;
+
+        console.log("El valor minimo es: " + minimo);
+        console.log("El valor maximo es: " + maximo);
+        console.log("El valor medio es: " + medio);
+
+    </script>
+
+</body>
+
+</html>

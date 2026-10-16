@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 5</title>
+</head>
+<body>
+    <script>
+
+        let r = prompt("Introduce el valor del radio: ");
+
+        let volumen = (r) => (4/3)*Math.PI*(r*r*r)
+
+        let area = (r) => Math.PI * (r*r)
+
+        document.write(`Volumen: ${volumen(r).toFixed(2)} <br>3
+        
+                        Area: ${area(r).toFixed(2)}
+                    `);
+
+    </script>
+</body>
+</html>

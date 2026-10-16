@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 3</title>
+</head>
+
+<body>
+
+    <p> Simulando 6000 tiradas </p>
+    <div id="resultado"></div>
+
+    <script>
+
+        const lanzamiento = () => Math.floor(Math.random() * 6) + 1;
+
+        let contadores = [0, 0, 0, 0, 0, 0];
+
+        for (let i = 1; i <= 6000; i++) {
+            let resultado = lanzamiento();
+            contadores[resultado -1]++;
+        }
+        
+        document.getElementById("resultado").innerHTML = `
+        El numero 1 ha salido ${contadores[0]} veces <br>
+        El numero 2 ha salido ${contadores[1]} veces <br>
+        El numero 3 ha salido ${contadores[2]} veces <br>
+        El numero 4 ha salido ${contadores[3]} veces <br>
+        El numero 5 ha salido ${contadores[4]} veces <br>
+        El numero 6 ha salido ${contadores[5]} veces <br>
+        `;
+        
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 7</title>
+</head>
+<body>
+    <script>
+
+        let arNumeros = [];
+
+        for(let i = 0; i<20; i++){
+            arNumeros.push(Math.floor(Math.random()*100))
+        }
+
+        let ordenado = [...arNumeros];
+        ordenado = ordenado.sort((a, b) => a-b);
+
+        let nuevo = [...new Set(ordenado)];        
+
+        document.write(`Array sin ordenar: ${arNumeros}<br>`);
+        document.write(`Array ordenado: ${ordenado}<br>`);
+        document.write(`Array sin duplicados: ${nuevo}`);
+
+    </script>
+    
+</body>
+</html>
