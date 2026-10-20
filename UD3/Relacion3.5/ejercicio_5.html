@@ -10,10 +10,10 @@
 <body>
 
     <script>
-
+        let n = parseInt(prompt("Introduce un numero: "))
         const fibonacci = n =>  (n < 3) ? 1:fibonacci(n-1)+ fibonacci(n-2);
             
-        document.write(fibonacci(2))
+        document.write("El resultado de fibonacci es: ",fibonacci(n))
 
     </script>
 

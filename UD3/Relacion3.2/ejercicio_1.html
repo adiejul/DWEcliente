@@ -13,7 +13,7 @@
         let arNumeros = [];
 
         for(let i = 0; i <5; i++){
-            arNumeros.push(parseFloat(prompt(`Introduce el numero ${i+1} /5`)))
+            arNumeros.push(parseFloat(prompt(`Introduce el numero ${i+1} de 5`)))
         }
 
         let minimo = Math.min(...arNumeros);
@@ -28,12 +28,11 @@
 
         let medio = total / arNumeros.length;
 
-        console.log("El valor minimo es: " + minimo);
-        console.log("El valor maximo es: " + maximo);
-        console.log("El valor medio es: " + medio);
+        document.write("El minimo es: ", minimo, "<br>");
+        document.write("El maximo es: " + maximo, "<br>");
+        document.write("La media es: " + medio);
 
     </script>
 
 </body>
-
 </html>
