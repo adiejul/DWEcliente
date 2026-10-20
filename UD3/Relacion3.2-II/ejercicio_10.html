@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 10</title>
+</head>
+
+<body>
+    <script>
+
+        const arFirst = [];
+        const arTurista = [];
+        let respuesta;
+
+        do {
+
+            let tipoAsiento = prompt("Introduce tipo de asiento (First/Turista) ").toLowerCase()
+
+            switch (tipoAsiento) {
+                case "first":
+                    if (arFirst.length === 5){
+                        alert("No hay plazas en la clase First");
+                    }else {
+                        let nombre = prompt("Introduce tu nombre")
+                        arFirst.push(nombre)
+                        let nueva = window.open()
+
+                        nueva.document.write(`
+                    
+                    TARJETA DE EMBARQUE <BR>
+                    Nombre: ${nombre}<br>
+                    Asiento: ${arFirst.length}
+                    `)
+                    }
+                    break;
+
+                case "turista":
+                    if (arTurista.length === 5)
+                        alert("No hay plazas en la clase Turista")
+                    else {
+                        let nombre = prompt("Introduce tu nombre")
+                        arTurista.push(nombre)
+                        let nueva = window.open()
+
+                        nueva.document.write(`
+                    
+                    TARJETA DE EMBARQUE <BR>
+                    Nombre: ${nombre}<br>
+                    Asiento: ${arTurista.length+5}
+                    `)
+                    }
+                    break;
+
+                default:
+                    alert("El tipo de asiento escogido no es correcto")
+                    break;
+            }
+            respuesta = prompt("¿Desea sacar otra tarjeta de embarque?").toLowerCase()
+            
+        } while(respuesta === "si")
+
+    </script>
+</body>
+
+</html>

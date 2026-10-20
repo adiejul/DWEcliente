@@ -24,9 +24,10 @@
 
         }while(continua !== "no")
 
+        
         vendedores.forEach(vendedor => {
             let sueldo = (vendedor.ventas*0.09) + 200;
-            document.write(`${vendedor.nombre} - ${sueldo.toFixed(2)}<br>`)
+            document.write(`${vendedor.nombre} : ${sueldo.toFixed(2)}<br>`)
             
         });
 
