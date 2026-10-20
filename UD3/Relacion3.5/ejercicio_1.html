@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 1</title>
+</head>
+
+<body>
+
+    <script>
+        //Ejercicio a
+
+        let sum = (a, b) => a + b
+
+        //Ejercicio b
+
+        let longestCityNameInTheWorld = "Taumatawhakatangihangakoauauotamateaturipukakapikimaungahoronukupokaiwhenuakitanatahu"
+
+        let stringLength = a => a.length
+
+        //ejercicio c
+
+        let stringLengthc = a => {
+            console.log(`the length of "${a}" is:`, a.length)
+            return a.length
+        }
+
+        //ejercicio d
+
+        let alerts = ["Hey, you are awesome", "You are so wonderful", "What a marvel you are", "You're so lovely", "You're so sweet that I'd think you're a sweet potato-- and I LOOOOVE POTATOES"]
+
+        let showAlert = (name) => {
+            alert(alerts[(Math.floor(Math.random() * alerts.length))] + `, ${name}!`)
+        }
+
+
+        document.write("ejercicio a: ", sum(40, 2), "<br>")
+        document.write("ejercicio a: ", sum(42, 0), "<br>")
+        document.write("ejercicio b: ", stringLength(longestCityNameInTheWorld), "<br>")
+        document.write("ejercicio c: ", stringLengthc("willynilly"), "<br>")
+        document.write("ejercicio d: ", showAlert("you ball of fluff"), "<br>")
+
+    </script>
+
+</body>
+
+</html>

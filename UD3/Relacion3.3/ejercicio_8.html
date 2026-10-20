@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 8</title>
+</head>
+
+<body>
+    <script>
+
+        const lanzamientos = []
+
+        function dados() {
+            for (let i = 0; i < 36000; i++) {
+                let dado1 = Math.floor(Math.random() * 6) + 1
+                let dado2 = Math.floor(Math.random() * 6) + 1
+
+                lanzamientos.push(dado1 + dado2)
+            }
+
+            for(let i = 2; i <= 12; i++){
+
+                let total = lanzamientos.filter(x => x === i).length
+                document.write(`El numero ${i} aparece ${total} veces <br>`)
+            }
+        }
+
+        dados()
+    </script>
+</body>
+
+</html>

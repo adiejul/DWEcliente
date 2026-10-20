@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 2</title>
+</head>
+
+<body>
+    <script>
+
+        const clase = [
+            "Angel Garcia, 20, 6, 7, 10",
+            "Jose Sanchez, 22, 8, 9, 4",
+            "Ana Karenina, 21, 5, 5, 5",
+            "Lorena Santos, 19, 2, 7, 4"
+        ];
+
+        function nota(nEstudiante, trimestre) {
+
+            let alumno = clase[nEstudiante].split(",")
+
+            if (trimestre < 1 || trimestre > 3 || trimestre === undefined) {
+
+                let suma = 0;
+
+                for (let i = 2; i <= 4; i++) {
+                    suma += parseInt(alumno[i]);
+                }
+
+                let promedio = suma/3;
+
+                return (`La media del alumno es: ${promedio}`)
+
+            } else {
+
+                let nota = alumno[trimestre]
+
+
+                return (`La nota del ${trimestre} trimestre es: ${nota}`);
+            }
+        }
+        let nEstudiante = parseInt(prompt("Introduce el numero de estudiante"))
+        let trimestre = parseInt(prompt("Introduce el numero de trimestre o 0 para la media del alumno"))
+        document.write(nota(nEstudiante, trimestre))
+
+
+    </script>
+
+</body>
+
+</html>

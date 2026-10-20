@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 6</title>
+</head>
+
+<body>
+
+    <script>
+        const vendedores = [];
+        let continua 
+
+        do {
+
+            let nombre = prompt("Introduce el nombre");
+            let ventas = parseFloat(prompt("Introduce el importe total de ventas"))
+
+            vendedores.push({ nombre: nombre, ventas: ventas });
+
+            continua = prompt("¿Desea continuar? - Introduce no para parar").toLowerCase()
+
+        }while(continua !== "no")
+
+        vendedores.forEach(vendedor => {
+            let sueldo = (vendedor.ventas*0.09) + 200;
+            document.write(`${vendedor.nombre} - ${sueldo.toFixed(2)}<br>`)
+            
+        });
+
+        
+
+
+
+
+    </script>
+
+</body>
+
+</html>

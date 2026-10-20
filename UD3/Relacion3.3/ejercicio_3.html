@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 3</title>
+</head>
+
+<body>
+
+    <script>
+
+        const clase = [
+            "Angel Garcia, 20, 6, 7, 10",
+            "Jose Sanchez, 22, 8, 9, 4",
+            "Ana Karenina, 21, 5, 5, 5",
+            "Lorena Santos, 19, 2, 7, 4"
+        ];
+
+        function edadMedia() {
+
+            let edades = clase.map(alumno => parseInt(alumno.split(",")[1]))
+
+            let suma = 0;
+
+            for (const edad of edades) {
+                suma += edad;
+            }
+
+            return (suma / edades.length);
+
+        }
+
+        document.write(`La edad media es de ${edadMedia()} años`)
+
+
+    </script>
+
+</body>
+
+</html>

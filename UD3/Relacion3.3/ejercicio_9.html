@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 9</title>
+</head>
+
+<body>
+
+    <script>
+
+        const lanzamientos = [];
+        const dado = []
+
+        for (let i = 0; i < 6; i++) {
+            dado.push([])
+
+            for (let x = 0; x < 6; x++) {
+                dado[i].push(0)
+            }
+        }
+
+        function dados() {
+
+            for (let i = 0; i < 36000; i++) {
+                let dado1 = Math.floor(Math.random() * 6) + 1
+                let dado2 = Math.floor(Math.random() * 6) + 1
+
+                lanzamientos.push(dado1 + dado2)
+                dado[dado1 - 1][dado2 - 1]++
+            }
+
+
+
+            for (let i = 2; i <= 12; i++) {
+
+                let total = lanzamientos.filter(x => x === i).length
+                document.write(`El numero ${i} aparece ${total} veces <br>`)
+            }
+
+            for (let a = 1; a <= 6; a++) {
+                for (let b = 1; b <= 6; b++) {
+
+                    document.write(`La combinacion ${a}-${b} ha salido: ${dado[a-1][b-1]} veces<br>`)
+                }
+            }
+
+        }
+
+        dados()
+    </script>
+
+</body>
+
+</html>
