@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 1</title>
+</head>
+
+<body>
+    <script>
+
+        const arNumeros = [4, 5, 6, 8, 10, 0, 9, 25]
+        const arFrutas = ['manzana', 'banana', 'fresa', 'kiwi', 'caquis'];
+
+        let grande = Math.max(...arNumeros)
+        let pequeño = Math.min(...arNumeros)
+        let par = arNumeros.filter(num=> num % 2 === 0)
+        let impar = arNumeros.filter(num=> num % 2 != 0)
+        let contieneIs = arFrutas.filter(palabra => palabra.includes('is'))
+        let divisible = arNumeros.filter(num => num % 3 == 0)
+        let arConcatena = arNumeros.concat(arFrutas)
+        let ordenado = arConcatena.sort()
+        let eliminaPrimera = arConcatena.shift()
+        let nuevaPalabra = arConcatena.push("nuevaPalabra")
+        let reemplaza = arConcatena.splice(1,1,"reemplazado")
+        
+
+
+        document.write(`El numero mas grande es: ${grande} <br>`)
+        document.write(`El numero mas pequeño es: ${pequeño} <br>`)
+        document.write(`Los numeros pares son: ${par} <br>`)
+        document.write(`Los numeros impares son: ${impar} <br>`)
+        document.write(`Los numeros impares son: ${contieneIs} <br>`)
+        document.write(`Comprobar que son divisibles en 3: ${divisible} <br>`)
+        document.write(`combinar dos arrays: ${arConcatena} <br>`)
+        document.write(`array combinado de menor a mayor: ${ordenado} <br>`)
+        document.write(`eliminar la primera palabra del array: ${eliminaPrimera} <br>`)
+        document.write(`Coloco una nueva palabra en array: ${nuevaPalabra} <br>`)
+        document.write(`Reemplazar algun elemento: ${reemplaza} <br>`)
+        document.write(arConcatena)
+
+
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 6</title>
+</head>
+<body>
+    <script>
+
+        let palabra = "con cien cañones por banda viento en popa a toda vela"
+
+       let sinEspacios = palabra.replaceAll(" ", "")
+
+        let longitud= sinEspacios.length
+        
+        let fila = Math.ceil(Math.sqrt(longitud))
+        let columna = Math.ceil(Math.sqrt(longitud))
+
+        const arFrase=[]
+        let cont = 0
+
+        for (let i = 0; i <= fila-1; i++){
+            arFrase.push([])
+            for (let x = 0; x <= columna-1; x++){
+                
+                arFrase[i].push(sinEspacios.charAt(cont))
+                cont++
+            }
+        }
+        
+        let palNueva = ""
+
+        for (let i = 0 ; i <= columna-1; i++){
+            palNueva += " "
+            for (let x = 0 ; x <= fila-1 ; x++){
+            
+                palNueva += arFrase[x][i]
+            }
+        }
+        
+        document.write(`La frase original es "${palabra}"<br>`)
+        document.write(`La frase codificada es "${palNueva}"`)
+        
+    </script>
+  
+</body>
+</html>

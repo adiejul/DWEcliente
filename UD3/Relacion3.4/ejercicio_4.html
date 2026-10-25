@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 4</title>
+</head>
+
+<body>
+    <!-- Desarrolla una función que sea capaz de crear una búsqueda del tesoro aleatoria como la anterior. 
+ Como argumentos recibirá las dimensiones de la matriz (al menos 5x5) y debe devolver una matriz 
+ válida de búsqueda del tesoro    -->
+
+    <script>
+
+        const arTreasure = [[34, 21, 32, 41, 25],
+                            [14, 42, 43, 14, 31],
+                            [54, 45, 33, 42, 23],
+                            [33, 15, 51, 31, 35],
+                            [21, 21, 33, 13, 23]
+                            ]
+        let tesoroEncontrado = false
+        let filaInicial = 1
+        let columnaInicial = 1
+        const arVisitas = []
+
+        while (!tesoroEncontrado) {
+
+            let filaPos = filaInicial - 1
+            let columnaPos = columnaInicial - 1
+
+            let numeroPos = arTreasure[filaPos][columnaPos]
+
+            let combiNum = (filaInicial * 10) + columnaInicial
+
+            arVisitas.push(arTreasure[filaPos][columnaPos])
+
+            if (numeroPos === combiNum) {
+                tesoroEncontrado = true
+                document.write(`Tesoro encontrado en la posicion ${filaPos + 1} ${columnaPos + 1} <br>`)
+                document.write(`Ha recorrido las siguientes posiciones : `, arVisitas.join(", "))
+            } else {
+
+                filaInicial = Math.floor(numeroPos / 10)
+                columnaInicial = numeroPos % 10
+            }
+
+        }
+
+    </script>
+
+</body>
+
+</html>
