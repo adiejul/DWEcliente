@@ -1,0 +1,16 @@
+#principal {
+    display: grid;
+    flex-direction: row;
+    grid-template-columns: repeat(4, 1fr);
+    max-width: 1200px;
+    margin: 0 auto; 
+}
+
+
+.tarjeta-articulo {
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
