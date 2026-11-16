@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 3</title>
+    <style>
+        body {
+            margin: 50px;
+        }
+
+        #principal {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .carta{
+            border: 1px solid black;
+            display: flex;
+            flex-direction: row;
+            margin-right: 10px;
+            padding: 10px;
+            height: 150px;
+            font-size: 2em;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <script type="module" src="ej3Main.js"></script>
+
+    <h2>El juevo de las parejas</h2>
+    <br><br><br>
+    <div id="principal"></div>
+
+</body>
+
+</html>
